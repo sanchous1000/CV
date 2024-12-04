@@ -46,7 +46,8 @@ final_img = cv2.drawMatches(main, queryKeypoints, example, trainKeypoints, match
 
 **Визуализация результатов:**
 
-![Результаты](sample1.jpg)(sample2.jpg)
+![Результаты](sample1.jpg)
+![Результаты](sample2.jpg)
 
 
 
