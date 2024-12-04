@@ -45,10 +45,9 @@ final_img = cv2.drawMatches(main, queryKeypoints, example, trainKeypoints, match
 
 
 **Визуализация результатов:**
-Результаты выводятся в сетке \( \text{rows} \times \text{cols} \), где каждая ячейка — это результат сопоставления двух изображений.
 
-### Пример визуализации:
-![Пример визуализации](Figure_1.png)
+![Результаты](sample1.jpg)(sample2.jpg)
+
 
 
 
