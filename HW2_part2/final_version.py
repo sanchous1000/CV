@@ -21,10 +21,12 @@ def ORB(main, example, am_match = 10):
     points1 = np.array([main_keypoints[m.queryIdx].pt for m in good_matches], dtype=np.float32)
     points2 = np.array([example_keypoints[m.trainIdx].pt for m in good_matches], dtype=np.float32)
 
+
+    #Визуализация результата при помощи матрицы преобразования
     H, mask = cv2.findHomography(points1, points2, cv2.RANSAC, 5.0)
     h, w, _ = main.shape
     pts = np.float32([[0, 0], [0, h], [w, h], [w, 0]]).reshape(-1, 1, 2)
-    dst = cv2.perspectiveTransform(pts, H)
+    dst = cv2.perspectiveTransform(pts, H) #изменение перспективы ищображения
 
     image2_with_box = cv2.polylines(example.copy(), [np.int32(dst)], isClosed=True, color=(0, 255, 0), thickness=3)
 
