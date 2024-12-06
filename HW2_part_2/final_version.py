@@ -38,17 +38,17 @@ def ORB(main, example, am_match = 10):
 results = []
 
 v = os.listdir('main')
-sample = os.listdir('samples1')
+sample = os.listdir('samples2')
 for i in sample:
     if 'mb' not in i:
         main = cv2.imread(f'main/{i}')
-        example = cv2.imread(f'samples1/{i}')
+        example = cv2.imread(f'samples2/{i}')
         result_img = ORB(main, example)
         results.append((main, result_img)) 
     else:
         print(i)
-        main = cv2.imread(r'C:\Users\Aleks\Documents\CV\HW2_part2\main\main_mb.jpg')
-        example = cv2.imread(f'samples1/{i}')
+        main = cv2.imread(r'C:\Users\Aleks\Documents\CV\HW2_part_2\main\main_mb.jpg')
+        example = cv2.imread(f'samples2/{i}')
         result_img = ORB(main, example, am_match = 10)
         results.append((main, result_img)) 
     
@@ -77,5 +77,3 @@ def plots(results):
     plt.tight_layout()
     plt.show()
 
-fig, axes = plt.subplots( 2,len(results[:5]), figsize=(15, 10))
-plots(results[5:10])
