@@ -1,4 +1,4 @@
-# Теоретическая база по сверточным нейронным сетям (Convolutional Neural Networks, CNN)
+# Convolutional Neural Networks
 
 ## Основные части архитектуры CNN
 ### 1. Входной слой (Input Layer)
